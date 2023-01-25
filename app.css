@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+.home-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+img {
+    width: 50px;
+}
+/*Navigation Bar */
+nav {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    width: 100%;
+    background-color: rgb(10, 10, 10);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(249, 243, 243);
+}
+ /* Contents of the homepage*/   
+.introduction {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.introduction h1 {
+    font-size: 5em;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #9b59b6, #f1c40f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.introduction h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #3498db, #9b59b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.introduction p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+}
+/* scroll down button*/
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: rotate 2s infinite;
+}
+/*roatate jo ki abhi nahi ho raha */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.scroll-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.scroll-button {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(238, 41, 6);
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(134, 117, 117, 0.5);
+    animation: jump 1s infinite;
+}
+
+.scroll-button i {
+    font-size: 24px;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid white;
+    display: inline-block;
+    margin: 0 auto;
+}
+/*Expertise */
+.expertise-section {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 300px auto;
+}
+/*Create the box */
+.expertise-box {
+    border: 4px solid;
+    padding: 100px;
+    text-align: center;
+    box-sizing: border-box;
+}
+/*3 boxes*/
+.expertise-box:nth-of-type(1) h3 {
+    border-color: pink;
+}
+
+.expertise-box:nth-of-type(2) h3 {
+    border-color: blue;
+}
+
+.expertise-box:nth-of-type(3) h3 {
+    border-color: orange;
+}
+
+h3 span {
+    color: pink;
+}
+/*Work. Create the timeline */
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50px;
+    background: linear-gradient(to right, #ff8177, #ff867a, #ff8c7f, #f99185, #cf9a81, #a6a178, #76aa7e, #3ab074);
+    border-radius: 40px 40px 60px 60px;
+    display: flex;
+    align-items: right;
+}
+
+.timeline-year {
+    position: absolute;
+    top: -40px;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(253, 0, 0);
+    padding: 10px;
+}
+
+.contact-section {
+    display: flex;
+}
+
+.left-section {
+    width: 50%;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin-top: 8%;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #9b59b6, #f1c40f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.right-section {
+    width: 50%;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin-top: 15%;
+    font-size: 2em;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #cc2b5e, #8953d5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* In your CSS file */
+nav {
+    /* Navbar styles here */
+    border-bottom: 1px solid #000; /* Add a border to the bottom of the navbar */
+}
+
+.content {
+    /* Content styles here */
+    margin-top: 20px; /* Add a margin to the top of the content to separate it from the navbar */
+}
