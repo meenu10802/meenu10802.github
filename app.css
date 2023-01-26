@@ -317,7 +317,7 @@ nav {
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.2s ease-out;
-    border-radius: 15%;
+    border-radius: 5%;
   }
   
   .timeline-title {
