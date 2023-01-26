@@ -230,8 +230,177 @@ nav {
     /* Navbar styles here */
     border-bottom: 1px solid #000; /* Add a border to the bottom of the navbar */
 }
-
 .content {
     /* Content styles here */
     margin-top: 20px; /* Add a margin to the top of the content to separate it from the navbar */
 }
+.timeline {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items:right;
+  }
+  
+  .timeline-item {
+    width: 50%;
+    position: relative;
+    margin-bottom: 50px;
+  }
+  
+  .timeline-year {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(75, 0, 250);
+    background-color: rgb(223, 0, 0);
+    padding: 10px;
+  }
+  
+  .timeline-content {
+    position: relative;
+    width: 30%;
+    background-color: #FFA69E;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+    border-radius: 15%;
+  }
+  
+  .timeline-title {
+    margin-top: 0;
+  }
+  
+  .timeline-description {
+    margin-bottom: 0;
+  }
+  
+  .active .timeline-content {
+    max-height: 500px;
+  }
+  .bubble {
+    background: linear-gradient(to bottom, #233329 0%,#2989d8 50%,#63D47151,#7db9e8 100%);
+
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    animation: jump 0.5s ease-in-out infinite alternate;
+  }
+  
+  @keyframes jump {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .card {
+    background-color: #f5f5f5;
+    padding: 20px;
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .card.rotate {
+    transform: rotate(180deg);
+  }
+  
+  .company-name {
+    margin: 0;
+    color: rgb(255, 0, 0);
+  }
+  
+  .job-description {
+    margin: 0;
+    color: rgb(246, 0, 0);
+  }
+
+
+
+
+
+ 
+  
+  .timeline-item1 {
+    width: 50%;
+    position: relative;
+    margin-bottom: 50px;
+  }
+  
+  .timeline-year1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(75, 0, 250);
+    background-color: rgb(223, 0, 0);
+    padding: 10px;
+  }
+  
+  .timeline-content1 {
+    position: relative;
+    width: 30%;
+    background-color: #FFA69E;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+    border-radius: 15%;
+  }
+  
+  .timeline-title1 {
+    margin-top: 0;
+  }
+  
+  .timeline-description1 {
+    margin-bottom: 0;
+  }
+  
+  .active .timeline-content1 {
+    max-height: 500px;
+  }
+  .bubble1 {
+    background: linear-gradient(to bottom, #233329 0%,#2989d8 50%,#63D47151,#7db9e8 100%);
+
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    animation: jump 0.5s ease-in-out infinite alternate;
+  }
+  
+  @keyframes jump {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .card {
+    background-color: #f5f5f5;
+    padding: 20px;
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .card.rotate {
+    transform: rotate(180deg);
+  }
+  
+  .company-name {
+    margin: 0;
+    color: rgb(255, 0, 0);
+  }
+  
+  .job-description {
+    margin: 0;
+    color: rgb(246, 0, 0);
+  }
