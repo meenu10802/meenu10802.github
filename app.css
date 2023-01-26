@@ -175,28 +175,77 @@ h3 span {
     color: pink;
 }
 /*Work. Create the timeline */
-.timeline-line {
+/* timeline nahi hua tou ab carousal*/
+/* Define the container for the carousel */
+.carousel {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Define the style for each carousel item */
+  .carousel-item {
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+    display: none; /* Hide all carousel items by default */
     position: absolute;
-    left: 50%;
+    top: 0;
+    left: 0;
+  }
+  
+  /* Show the first carousel item by default */
+  .carousel-item:first-child {
+    display: block;
+  }
+  
+  /* Add navigation buttons */
+  .carousel-prev, .carousel-next {
+    position: absolute;
     top: 50%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    height: 50px;
-    background: linear-gradient(to right, #ff8177, #ff867a, #ff8c7f, #f99185, #cf9a81, #a6a178, #76aa7e, #3ab074);
-    border-radius: 40px 40px 60px 60px;
-    display: flex;
-    align-items: right;
-}
-
-.timeline-year {
-    position: absolute;
-    top: -40px;
-    font-size: 24px;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
     font-weight: bold;
-    color: rgb(253, 0, 0);
-    padding: 10px;
-}
-
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+  }
+  
+  /* Position the "next" button to the right */
+  .carousel-next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .carousel-prev:hover, .carousel-next:hover {
+    background-color: rgba(236, 10, 10, 0.8);
+  }
+  
+  /* Add a dot navigation */
+  .carousel-dots {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Style the dots */
+  .carousel-dots .dot {
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  /* When the user clicks on a dot, make the current dot "active" */
+  .carousel-dots .dot.active {
+    background-color: #717171;
+  }
 .contact-section {
     display: flex;
 }
@@ -230,6 +279,7 @@ nav {
     /* Navbar styles here */
     border-bottom: 1px solid #000; /* Add a border to the bottom of the navbar */
 }
+
 .content {
     /* Content styles here */
     margin-top: 20px; /* Add a margin to the top of the content to separate it from the navbar */
