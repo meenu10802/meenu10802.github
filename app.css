@@ -283,174 +283,196 @@ nav {
 .content {
     /* Content styles here */
     margin-top: 20px; /* Add a margin to the top of the content to separate it from the navbar */
+
+.logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
-.timeline {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items:right;
+
+img {
+  width: 50px;
+}
+/*Work. Create the timeline */
+.flip-card-container {
+  display: flex;
+    width: 900px;
+    align-items: center;
+  height: 500px;
+}
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+margin: 200px;  
+border-radius: 5%;
+ display: inline-block;
+}
+h6{
+  margin: 20%;
+  color: rgb(10, 38, 224);
+font-family: monospace;
+font-size:x-large;
+}
+  h5{
+    margin: 20%;
+    color: rgb(215, 20, 189);
+  font-family: monospace;
+  font-size:x-large;
   }
   
-  .timeline-item {
-    width: 50%;
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
     position: relative;
-    margin-bottom: 50px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  h3{
+    margin: 20%;
+    color: rgb(213, 19, 184);
+  font-family: monospace;
+  font-size:x-large; 
+  }
+    h2{
+        margin: 9%;
+        font-size: medium;
+    color: rgb(232, 4, 145) 
+    }
+    h4{
+      margin: 10%;
+  color: rgb(9, 12, 234) 
+  }
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
   }
   
-  .timeline-year {
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
     position: absolute;
-    left: 0;
-    top: 0;
-    font-size: 18px;
-    font-weight: bold;
-    color: rgb(75, 0, 250);
-    background-color: rgb(223, 0, 0);
-    padding: 10px;
-  }
-  
-  .timeline-content {
-    position: relative;
-    width: 30%;
-    background-color: #FFA69E;
-    padding: 20px;
-    box-sizing: border-box;
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.2s ease-out;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
     border-radius: 5%;
   }
   
-  .timeline-title {
-    margin-top: 0;
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: rgb(247, 251, 59);
+    color: rgb(245, 245, 243);
+    
   }
   
-  .timeline-description {
-    margin-bottom: 0;
+  /* Style the back side */
+  .flip-card-back {
+    background-color: rgb(223, 235, 55);
+    color: white;
+    transform: rotateY(180deg);
   }
-  
-  .active .timeline-content {
-    max-height: 500px;
-  }
-  .bubble {
-    background: linear-gradient(to bottom, #233329 0%,#2989d8 50%,#63D47151,#7db9e8 100%);
-
-    border-radius: 50%;
-    padding: 10px;
-    text-align: center;
-    animation: jump 0.5s ease-in-out infinite alternate;
-  }
-  
-  @keyframes jump {
-    from {
-      transform: translateY(0);
-    }
-    to {
-      transform: translateY(-10px);
-    }
-  }
-  
-  .card {
-    background-color: #f5f5f5;
-    padding: 20px;
-    transition: transform 0.5s ease-in-out;
-    cursor: pointer;
-  }
-  
-  .card.rotate {
-    transform: rotate(180deg);
-  }
-  
-  .company-name {
+  * {
     margin: 0;
-    color: rgb(255, 0, 0);
-  }
-  
-  .job-description {
-    margin: 0;
-    color: rgb(246, 0, 0);
-  }
-
-
-
-
-
- 
-  
-  .timeline-item1 {
-    width: 50%;
-    position: relative;
-    margin-bottom: 50px;
-  }
-  
-  .timeline-year1 {
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-size: 18px;
-    font-weight: bold;
-    color: rgb(75, 0, 250);
-    background-color: rgb(223, 0, 0);
-    padding: 10px;
-  }
-  
-  .timeline-content1 {
-    position: relative;
-    width: 30%;
-    background-color: #FFA69E;
-    padding: 20px;
+    padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.2s ease-out;
-    border-radius: 15%;
-  }
-  
-  .timeline-title1 {
-    margin-top: 0;
-  }
-  
-  .timeline-description1 {
-    margin-bottom: 0;
-  }
-  
-  .active .timeline-content1 {
-    max-height: 500px;
-  }
-  .bubble1 {
-    background: linear-gradient(to bottom, #233329 0%,#2989d8 50%,#63D47151,#7db9e8 100%);
+}
 
-    border-radius: 50%;
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+}
+nav {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    width: 100%;
+    background-color: rgb(10, 10, 10);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     padding: 10px;
-    text-align: center;
-    animation: jump 0.5s ease-in-out infinite alternate;
-  }
-  
-  @keyframes jump {
-    from {
-      transform: translateY(0);
-    }
-    to {
-      transform: translateY(-10px);
-    }
-  }
-  
-  .card {
-    background-color: #f5f5f5;
-    padding: 20px;
-    transition: transform 0.5s ease-in-out;
-    cursor: pointer;
-  }
-  
-  .card.rotate {
-    transform: rotate(180deg);
-  }
-  
-  .company-name {
-    margin: 0;
-    color: rgb(255, 0, 0);
-  }
-  
-  .job-description {
-    margin: 0;
-    color: rgb(246, 0, 0);
-  }
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(249, 243, 243);
+}
+/* bubbles*/
+body::before {
+  content: "";
+  position: absolute;
+  top: 150px;
+  right: 10px;
+  width: 500px;
+  height: 500px;
+  background-color: blue;
+  border-radius: 50% 50% 0 50%;
+}
+
+body::after {
+  content: "";
+  position:absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 400px;
+  height: 400px;
+  background-color: pink;
+  border-radius: 50% 50% 50% 0;
+ /*another bubble*/
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: 150px;
+  right: 10px;
+  width: 500px;
+  height: 500px;
+  background-color: blue;
+  border-radius: 50% 50% 0 50%;
+}
+
+body::after {
+  content: "";
+  position:absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 400px;
+  height: 400px;
+  background-color: pink;
+  border-radius: 50% 50% 50% 0;
+ 
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+
+.bubble {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #FBC02D;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.bubble:hover {
+  transform: translateX(-10px);
+}
